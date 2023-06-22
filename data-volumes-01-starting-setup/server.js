@@ -26,7 +26,7 @@ app.post('/create', async (req, res) => {
   const title = req.body.title;
   const content = req.body.text;
 
-  console.log("Heeey!");``
+  console.log("Heeey!");
   const adjTitle = title.toLowerCase();
   const tempFilePath = path.join(__dirname, 'temp', adjTitle + '.txt');
   const finalFilePath = path.join(__dirname, 'feedback', adjTitle + '.txt');
@@ -43,4 +43,4 @@ app.post('/create', async (req, res) => {
   });
 });
 
-app.listen(80);
+app.listen(process.env.PORT);
